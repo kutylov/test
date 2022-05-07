@@ -59,7 +59,14 @@ public class TicTacToe {
     }
 
     private static void printGameTable(final char[][] gameTable) {
-
+        for (int i = 0; i < 3; i++) {
+            System.out.println("-------------");
+            for (int j = 0; j < 3; j++) {
+                System.out.print("| " + gameTable[i][j] + " ");
+            }
+            System.out.println("|");
+        }
+        System.out.println("-------------");
     }
 
     private static void makeComputerMove(final char[][] gameTable) {

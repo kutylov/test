@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * @author devonline
@@ -55,7 +56,22 @@ public class TicTacToe {
     }
 
     private static void makeUserMove(final char[][] gameTable) {
+        while (true) {
+            System.out.println("Please type number between 1 and 9:");
+            String string = new Scanner(System.in).nextLine();
+            if (string.length() == 1) {
+                char digit = string.charAt(0);
+                if (digit >= '1' && digit <= '9') {
+                    if (makeUserMoveToCell(gameTable, digit)) {
+                        return;
+                    }
+                }
+            }
+        }
+    }
 
+    private static boolean makeUserMoveToCell(final char[][] gameTable, final char digit) {
+        return false;
     }
 
     private static void printGameTable(final char[][] gameTable) {

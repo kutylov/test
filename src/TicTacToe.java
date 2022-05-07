@@ -44,7 +44,8 @@ public class TicTacToe {
     }
 
     private static boolean isComputerWin(final char[][] gameTable) {
-        return false;
+        return isWinner(gameTable, 'O');
+
     }
 
     private static boolean isDraw(final char[][] gameTable) {
